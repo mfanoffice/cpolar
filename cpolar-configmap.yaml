@@ -4,8 +4,8 @@ metadata:
   name: cpolar-config
   namespace: cpolar
 data:
-  my.cnf: |
-    authtoken: ZDg1YTFhMGItMTUwZi00MDRjLThmNTItNmIzOTJkNWI5YzI5
+  cpolar.yml: |
+    authtoken: **********************************
     tunnels:
       ssh:
         proto: tcp
