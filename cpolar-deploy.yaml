@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cpolar
+  namespace: cpolar
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cpolar
+  template:
+    metadata:
+      labels:
+        app: cpolar
+    spec:
+      containers:
+      - name: cpolar
+        image: uhub.service.ucloud.cn/fanym/cpolar:latest
+        volumeMounts:
+        - name: cpolar-conf
+          mountPath: /root/.cpolar/cpolar.yml
+          subPath: cpolar.yml
+      volumes:
+        - name: cpolar-conf
+          configMap:
+            name: cpolar-config

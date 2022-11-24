@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cpolar-config
+  namespace: cpolar
+data:
+  my.cnf: |
+    authtoken: ZDg1YTFhMGItMTUwZi00MDRjLThmNTItNmIzOTJkNWI5YzI5
+    tunnels:
+      ssh:
+        proto: tcp
+        addr: "22"
+        region: cn_vip
+      de-k8s:
+        proto: http
+        addr: "30081"
+        subdomain: de-k8s
+        region: cn_vip
+      de-nginx:
+        proto: http
+        addr: "10.1.13.197:80"
+        subdomain: de-nginx
+        region: cn_vip
