@@ -5,7 +5,7 @@ metadata:
   namespace: cpolar
 data:
   cpolar.yml: |
-    authtoken: **********************************
+    authtoken: ***************************************
     tunnels:
       ssh:
         proto: tcp
