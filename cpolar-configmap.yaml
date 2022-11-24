@@ -13,11 +13,11 @@ data:
         region: cn_vip
       de-k8s:
         proto: http
-        addr: "30081"
+        addr: "10.1.1.6:81"
         subdomain: de-k8s
         region: cn_vip
       de-nginx:
         proto: http
-        addr: "10.1.13.197:80"
+        addr: "10.1.1.7:80"
         subdomain: de-nginx
         region: cn_vip
